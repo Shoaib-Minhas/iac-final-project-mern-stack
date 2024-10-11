@@ -9,6 +9,8 @@ services:
       MONGO_URI: mongodb://mongo:27017/mydatabase  
     depends_on:
       - mongodb
+    hostname: My-file
+    container_name: backend-container
 
   frontend:
     build: ./mern/frontend
@@ -18,7 +20,8 @@ services:
       - mern_network
     environment:
       REACT_APP_API_URL: http://backend:5050 
-
+    hostname: My-file
+    container_name: frontend-container
   mongodb:
     image: mongo:latest  
     ports:
@@ -27,6 +30,8 @@ services:
       - mern_network
     volumes:
       - mongo-data:/data/db  
+    hostname: My-Mongodb
+    container_name: Mongodb-container
 
 networks:
   mern_network:
