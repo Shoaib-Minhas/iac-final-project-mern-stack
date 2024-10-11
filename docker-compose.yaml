@@ -34,5 +34,5 @@ networks:
 
 volumes:
   mongo-data:
-    driver: local  # Persist MongoDB data locally
+    driver: local  
 
