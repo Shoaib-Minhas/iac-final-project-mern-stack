@@ -2,7 +2,7 @@ services:
   backend:
     build: ./mern/backend
     ports:
-      - "5000:5000" 
+      - "5050:5050" 
     networks:
       - mern_network
     environment:
@@ -15,11 +15,11 @@ services:
   frontend:
     build: ./mern/frontend
     ports:
-      - "5001:5001"  
+      - "5173:5173"  
     networks:
       - mern_network
     environment:
-      REACT_APP_API_URL: http://backend:5000
+      REACT_APP_API_URL: http://backend:5050
     hostname: My-file
     container_name: frontend-container
   mongodb:
