@@ -1,3 +1,4 @@
+
 FROM node:18.9.1
 
 WORKDIR /app
@@ -10,6 +11,5 @@ EXPOSE 5173
 
 COPY . .
 
-CMD ["npm" ,"run" ,"dev"]
-
+CMD ["npm", "run", "dev"]
 
